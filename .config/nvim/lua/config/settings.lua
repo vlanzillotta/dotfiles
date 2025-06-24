@@ -25,7 +25,10 @@ vim.o.showmode = true
 vim.schedule(function()
   vim.o.clipboard = 'unnamedplus'
 end)
-
+--vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
+vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
+--vim.o.expandtab = true
+vim.o.tabstop = 4
 -- Enable break indent
 
 -- Every wrapped line will continue visually indented (same amount of
@@ -63,7 +66,7 @@ vim.o.splitbelow = true
 --   See `:help lua-options`
 --   and `:help lua-options-guide`
 vim.o.list = true
--- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = '| ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
