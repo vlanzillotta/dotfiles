@@ -2,7 +2,7 @@ return {
 	"mason-org/mason-lspconfig.nvim", -- This is a addont that will utalize mason to install needed lsp servers
 	config = function()
 		require("mason-lspconfig").setup({
-			ensure_installed = { "lua_ls", "pyright", "gopls" },
+			ensure_installed = { "lua_ls", "pyright", "gopls", "ts_ls" },
 		})
 	end,
 	dependencies = {
@@ -20,6 +20,7 @@ return {
 				lsp_config.lua_ls.setup({})
 				lsp_config.pyright.setup({})
 				lsp_config.gopls.setup({})
+				lsp_config.ts_ls.setup({})
 
 				vim.api.nvim_create_autocmd("LspAttach", {
 					group = vim.api.nvim_create_augroup("kickstart-lsp-attach", { clear = true }),
